@@ -16,11 +16,11 @@
   <repo>https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcp.git</repo>
   <issue>https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcp/issues</issue>
 
-  <js-module src="sockets.tcp.js" name="sockets.tcp">
-    <clobbers target="chrome.sockets.tcp" />
-  </js-module>
-
   <platform name="android">
+    <js-module src="sockets.tcp.js" name="sockets.tcp">
+      <clobbers target="chrome.sockets.tcp" />
+    </js-module>
+    
     <dependency id="cordova-plugin-chrome-apps-common@1" />
 
     <source-file src="src/android/ChromeSocketsTcp.java" target-dir="src/org/chromium" />
@@ -33,6 +33,10 @@
   </platform>
 
   <platform name="ios">
+    <js-module src="sockets.tcp.js" name="sockets.tcp">
+      <clobbers target="chrome.sockets.tcp" />
+    </js-module>
+        
     <dependency id="cordova-plugin-chrome-apps-common@1" />
 
     <dependency id="cordova-plugin-chrome-apps-iossocketscommon@1" />
